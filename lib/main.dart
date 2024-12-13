@@ -12,23 +12,23 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _i = 0;
+  int i = 0;
 
   void _increment() {
     setState(() {
-      _i++;
+      i++;
     });
   }
 
   void _decrement() {
     setState(() {
-      _i--;
+      i--;
     });
   }
 
   void _reset() {
     setState(() {
-      _i = 0;
+      i = 0;
     });
   }
 
@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
               ),
               const SizedBox(height: 20),
               Text(
-                '$_i',
+                '$i',
                 style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
