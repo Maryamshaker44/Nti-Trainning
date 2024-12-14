@@ -22,7 +22,11 @@ class _MyAppState extends State<MyApp> {
 
   void _decrement() {
     setState(() {
-      i--;
+      if (i > 0) {
+        print(i--);
+      } else {
+        print(i = 0);
+      }
     });
   }
 
@@ -66,11 +70,12 @@ class _MyAppState extends State<MyApp> {
               ),
               const SizedBox(height: 20),
               IconButton(
-                  onPressed: _increment,
-                  icon: const Icon(
-                    Icons.add,
-                    size: 25,
-                  ),),
+                onPressed: _increment,
+                icon: const Icon(
+                  Icons.add,
+                  size: 25,
+                ),
+              ),
               const SizedBox(height: 20),
               IconButton(
                   onPressed: _decrement,
